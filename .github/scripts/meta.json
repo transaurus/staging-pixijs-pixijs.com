@@ -1,0 +1,10 @@
+{
+  "sourceUrl": "https://github.com/pixijs/pixijs.com",
+  "branch": "main",
+  "docusaurusRoot": ".",
+  "configFile": "docusaurus.config.ts",
+  "translateCommand": "npm run write-translations",
+  "buildCommand": "npm run build",
+  "buildOutput": "build",
+  "packageManager": "npm"
+}
