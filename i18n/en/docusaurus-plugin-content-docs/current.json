@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "v8.x",
+    "description": "The label for version current"
+  },
+  "sidebar.guidesSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Core Concepts": {
+    "message": "Core Concepts",
+    "description": "The label for category 'Core Concepts' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Components": {
+    "message": "Components",
+    "description": "The label for category 'Components' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Assets": {
+    "message": "Assets",
+    "description": "The label for category 'Assets' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Application": {
+    "message": "Application",
+    "description": "The label for category 'Application' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Scene Objects": {
+    "message": "Scene Objects",
+    "description": "The label for category 'Scene Objects' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Container": {
+    "message": "Container",
+    "description": "The label for category 'Container' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Graphics": {
+    "message": "Graphics",
+    "description": "The label for category 'Graphics' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Text": {
+    "message": "Text",
+    "description": "The label for category 'Text' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Third Party Integrations": {
+    "message": "Third Party Integrations",
+    "description": "The label for category 'Third Party Integrations' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Migrations": {
+    "message": "Migrations",
+    "description": "The label for category 'Migrations' in sidebar 'guidesSidebar'"
+  }
+}

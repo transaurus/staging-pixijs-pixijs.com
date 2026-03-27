@@ -1,0 +1,74 @@
+{
+  "version.label": {
+    "message": "v7.x",
+    "description": "The label for version 7.x"
+  },
+  "sidebar.guidesSidebar.category.Basics": {
+    "message": "Basics",
+    "description": "The label for category 'Basics' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Components": {
+    "message": "Components",
+    "description": "The label for category 'Components' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Production": {
+    "message": "Production",
+    "description": "The label for category 'Production' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.guidesSidebar.category.Migrations": {
+    "message": "Migrations",
+    "description": "The label for category 'Migrations' in sidebar 'guidesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Basic": {
+    "message": "Basic",
+    "description": "The label for category 'Basic' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Advanced": {
+    "message": "Advanced",
+    "description": "The label for category 'Advanced' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Sprite": {
+    "message": "Sprite",
+    "description": "The label for category 'Sprite' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Text": {
+    "message": "Text",
+    "description": "The label for category 'Text' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Graphics": {
+    "message": "Graphics",
+    "description": "The label for category 'Graphics' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Events": {
+    "message": "Events",
+    "description": "The label for category 'Events' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Masks": {
+    "message": "Masks",
+    "description": "The label for category 'Masks' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Filters Basic": {
+    "message": "Filters Basic",
+    "description": "The label for category 'Filters Basic' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Filters Advanced": {
+    "message": "Filters Advanced",
+    "description": "The label for category 'Filters Advanced' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Mesh And Shaders": {
+    "message": "Mesh And Shaders",
+    "description": "The label for category 'Mesh And Shaders' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Textures": {
+    "message": "Textures",
+    "description": "The label for category 'Textures' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Assets": {
+    "message": "Assets",
+    "description": "The label for category 'Assets' in sidebar 'examplesSidebar'"
+  },
+  "sidebar.examplesSidebar.category.Offscreen Canvas": {
+    "message": "Offscreen Canvas",
+    "description": "The label for category 'Offscreen Canvas' in sidebar 'examplesSidebar'"
+  }
+}

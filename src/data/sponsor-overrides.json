@@ -1,0 +1,23 @@
+[
+  {
+    "login": "watchindiaa",
+    "avatarUrl": "/images/sponsors/watchindiaa.jpg",
+    "linkUrl": "https://etawatchesindia.in/"
+  },
+  {
+    "login": "yarn1",
+    "avatarUrl": "/images/sponsors/yarn.webp",
+    "linkUrl": "https://www.yarn.so/"
+  },
+  {
+    "login": "medical-cannabis-glossary",
+    "avatarUrl": "/images/sponsors/releaf.webp"
+  },
+  {
+    "login": "seojamesroy",
+    "name": "Poprey",
+    "avatarUrl": "/images/sponsors/poprey-og.png",
+    "linkUrl": "https://poprey.pt/",
+    "privacyLevel": "PRIVATE"
+  }
+]

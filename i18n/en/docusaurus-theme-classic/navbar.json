@@ -1,0 +1,134 @@
+{
+  "logo.alt": {
+    "message": "PixiJS",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
+  },
+  "item.label.Playground": {
+    "message": "Playground",
+    "description": "Navbar item with label Playground"
+  },
+  "item.label.Showcase": {
+    "message": "Showcase",
+    "description": "Navbar item with label Showcase"
+  },
+  "item.label.Ecosystem": {
+    "message": "Ecosystem",
+    "description": "Navbar item with label Ecosystem"
+  },
+  "item.label.About": {
+    "message": "About",
+    "description": "Navbar item with label About"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Sponsor": {
+    "message": "Sponsor",
+    "description": "Navbar item with label Sponsor"
+  },
+  "item.label.Guides": {
+    "message": "Guides",
+    "description": "Navbar item with label Guides"
+  },
+  "item.label.Tutorials": {
+    "message": "Tutorials",
+    "description": "Navbar item with label Tutorials"
+  },
+  "item.label.Examples": {
+    "message": "Examples",
+    "description": "Navbar item with label Examples"
+  },
+  "item.label.LLM Docs": {
+    "message": "LLM Docs",
+    "description": "Navbar item with label LLM Docs"
+  },
+  "item.label.v8.x": {
+    "message": "v8.x",
+    "description": "Navbar item with label v8.x"
+  },
+  "item.label.v7.x": {
+    "message": "v7.x",
+    "description": "Navbar item with label v7.x"
+  },
+  "item.label.React": {
+    "message": "React",
+    "description": "Navbar item with label React"
+  },
+  "item.label.Layout": {
+    "message": "Layout",
+    "description": "Navbar item with label Layout"
+  },
+  "item.label.Spine": {
+    "message": "Spine",
+    "description": "Navbar item with label Spine"
+  },
+  "item.label.Filters": {
+    "message": "Filters",
+    "description": "Navbar item with label Filters"
+  },
+  "item.label.Sound": {
+    "message": "Sound",
+    "description": "Navbar item with label Sound"
+  },
+  "item.label.UI": {
+    "message": "UI",
+    "description": "Navbar item with label UI"
+  },
+  "item.label.DevTools": {
+    "message": "DevTools",
+    "description": "Navbar item with label DevTools"
+  },
+  "item.label.AssetPack": {
+    "message": "AssetPack",
+    "description": "Navbar item with label AssetPack"
+  },
+  "item.label.Storybook": {
+    "message": "Storybook",
+    "description": "Navbar item with label Storybook"
+  },
+  "item.label.Text Style Editor": {
+    "message": "Text Style Editor",
+    "description": "Navbar item with label Text Style Editor"
+  },
+  "item.label.Discussions": {
+    "message": "Discussions",
+    "description": "Navbar item with label Discussions"
+  },
+  "item.label.Discord": {
+    "message": "Discord",
+    "description": "Navbar item with label Discord"
+  },
+  "item.label.Team": {
+    "message": "Team",
+    "description": "Navbar item with label Team"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Navbar item with label FAQ"
+  },
+  "item.label.Bug Bounty": {
+    "message": "Bug Bounty",
+    "description": "Navbar item with label Bug Bounty"
+  },
+  "item.label.Community Guide": {
+    "message": "Community Guide",
+    "description": "Navbar item with label Community Guide"
+  },
+  "item.label.Code of Conduct": {
+    "message": "Code of Conduct",
+    "description": "Navbar item with label Code of Conduct"
+  },
+  "item.label.Branding": {
+    "message": "Branding",
+    "description": "Navbar item with label Branding"
+  }
+}
