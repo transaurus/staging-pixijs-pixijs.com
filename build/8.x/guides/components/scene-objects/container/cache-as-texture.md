@@ -50,12 +50,7 @@ import * as PIXI from 'pixi.js';
 
   // holder to store aliens
   const aliens = [];
-  const alienFrames = [
-    'eggHead.png',
-    'flowerTop.png',
-    'helmlok.png',
-    'skully.png',
-  ];
+  const alienFrames = ['eggHead.png', 'flowerTop.png', 'helmlok.png', 'skully.png'];
 
   let count = 0;
 

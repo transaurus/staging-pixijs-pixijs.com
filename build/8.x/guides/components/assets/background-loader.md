@@ -11,15 +11,11 @@ const manifest = {
   bundles: [
     {
       name: 'home-screen',
-      assets: [
-        { alias: 'flowerTop', src: 'https://pixijs.com/assets/flowerTop.png' },
-      ],
+      assets: [{ alias: 'flowerTop', src: 'https://pixijs.com/assets/flowerTop.png' }],
     },
     {
       name: 'game-screen',
-      assets: [
-        { alias: 'eggHead', src: 'https://pixijs.com/assets/eggHead.png' },
-      ],
+      assets: [{ alias: 'eggHead', src: 'https://pixijs.com/assets/eggHead.png' }],
     },
   ],
 };
@@ -40,16 +36,10 @@ You can also load individual assets in the background using the `Assets.backgrou
 
 ```ts
 // Load an individual asset in the background
-Assets.backgroundLoad({
-  alias: 'flowerTop',
-  src: 'https://pixijs.com/assets/flowerTop.png',
-});
+Assets.backgroundLoad({ alias: 'flowerTop', src: 'https://pixijs.com/assets/flowerTop.png' });
 
 // Load another asset in the background
-Assets.backgroundLoad({
-  alias: 'eggHead',
-  src: 'https://pixijs.com/assets/eggHead.png',
-});
+Assets.backgroundLoad({ alias: 'eggHead', src: 'https://pixijs.com/assets/eggHead.png' });
 ```
 
 ## API Reference

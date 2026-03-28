@@ -22,10 +22,10 @@ app.stage.addChild(html);
 
 ## **Why Use `HTMLText`?**
 
-- ✅ Supports inline tags like `, `, ``, etc.
+- ✅ Supports inline tags like ``, ``, ``, etc.
 - ✅ Compatible with emojis, Unicode, and RTL text
 - ✅ Fine-grained layout control via CSS
-- ✅ Tag-based style overrides (`, `, etc.)
+- ✅ Tag-based style overrides (``, ``, etc.)
 
 ## **Async Rendering Behavior**
 

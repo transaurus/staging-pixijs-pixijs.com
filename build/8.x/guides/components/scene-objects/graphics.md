@@ -101,11 +101,7 @@ shapeA.destroy({ context: true }); // Destroys both shapeA and shapeB
 Use `.cut()` to remove a shape from the previous one:
 
 ```ts
-const g = new Graphics()
-  .rect(0, 0, 100, 100)
-  .fill(0x00ff00)
-  .circle(50, 50, 20)
-  .cut(); // Creates a hole in the green rectangle
+const g = new Graphics().rect(0, 0, 100, 100).fill(0x00ff00).circle(50, 50, 20).cut(); // Creates a hole in the green rectangle
 ```
 
 Ensure the hole is fully enclosed within the shape to avoid triangulation errors.

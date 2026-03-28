@@ -1,0 +1,10 @@
+{
+  "copyright": {
+    "message": "© 2026 PixiJS.<br>A labour of love built by the <a href=\"/team\">PixiJS team</a>.",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "PixiJS",
+    "description": "The alt text of footer logo"
+  }
+}

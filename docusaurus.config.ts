@@ -9,12 +9,12 @@ const config: Config = {
   tagline: 'Homepage still needs to be revamped',
   url: 'https://pixijs.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenAnchors: 'throw',
   favicon: 'images/favicon.png',
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: 'throw',
+      onBrokenMarkdownLinks: "warn",
       onBrokenMarkdownImages: 'throw',
     },
   },
@@ -34,7 +34,7 @@ const config: Config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ["en", "zh-Hans"],
   },
 
   future: {

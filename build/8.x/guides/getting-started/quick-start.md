@@ -1,3 +1,6 @@
+import { EmbeddedEditor } from '@site/src/components/Editor/EmbeddedEditor';
+import IndexFile from '!!raw-loader!@site/docs/examples/container_transform_pivot_basic';
+
 # Quick Start
 
 ---
@@ -24,10 +27,11 @@ Make sure your current working directory is where you want to create your projec
 npm create pixi.js@latest
 ```
 
+  
+
 This command will install and execute the [PixiJS Create](https://pixijs.io/create-pixi/) CLI and begin scaffolding your project. You will be prompted to configure your project by selecting various options, including selecting a template type for setting up your project. There are two main types of templates to choose from:
 
 #### Creation Templates (Recommended)
-
 Creation templates are tailored for specific platforms and include additional configurations and dependencies to streamline development for a particular use case. These templates are more opinionated and are perfect for beginners or those looking for a ready-to-go setup.
 
 #### Bundler Templates
@@ -39,7 +43,7 @@ We recommended using the Vite + PixiJS template for most projects when using bun
 After selecting your desired template, the scaffolding tool will create a new project directory with the chosen configuration. Navigate to the project directory and install the dependencies:
 
 ```bash
-cd
+cd 
 npm install
 npm run dev
 ```
@@ -54,53 +58,7 @@ npm install pixi.js
 
 Once you've set up your project, here's a simple example to get started with PixiJS:
 
-```ts
-// description: This example demonstrates how to use a Container to group and manipulate multiple sprites
-import { Application, Assets, Container, Sprite } from 'pixi.js';
-
-(async () => {
-  // Create a new application
-  const app = new Application();
-
-  // Initialize the application
-  await app.init({ background: '#1099bb', resizeTo: window });
-
-  // Append the application canvas to the document body
-  document.body.appendChild(app.canvas);
-
-  // Create and add a container to the stage
-  const container = new Container();
-
-  app.stage.addChild(container);
-
-  // Load the bunny texture
-  const texture = await Assets.load('https://pixijs.com/assets/bunny.png');
-
-  // Create a 5x5 grid of bunnies in the container
-  for (let i = 0; i < 25; i++) {
-    const bunny = new Sprite(texture);
-
-    bunny.x = (i % 5) * 40;
-    bunny.y = Math.floor(i / 5) * 40;
-    container.addChild(bunny);
-  }
-
-  // Move the container to the center
-  container.x = app.screen.width / 2;
-  container.y = app.screen.height / 2;
-
-  // Center the bunny sprites in local container coordinates
-  container.pivot.x = container.width / 2;
-  container.pivot.y = container.height / 2;
-
-  // Listen for animate update
-  app.ticker.add((time) => {
-    // Continuously rotate the container!
-    // * use delta to create frame-independent transform *
-    container.rotation -= 0.01 * time.deltaTime;
-  });
-})();
-```
+{/* embedded:@site/docs/examples/container_transform_pivot_basic.js */}
 
 :::warning
 If using Vite you still need to wrap your code in an async function. There is an issue when using top level await with PixiJS when building for production.

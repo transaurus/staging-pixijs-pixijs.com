@@ -59,7 +59,7 @@ To use `BitmapText`, you must first register a bitmap font via:
 
 `HTMLText` lets you render actual HTML markup in your PixiJS scene. This allows:
 
-- `, `, `` style formatting
+- ``, ``, `` style formatting
 - Fine layout and text flow
 - Emoji, RTL, links, and more
 

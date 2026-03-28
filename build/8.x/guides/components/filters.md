@@ -21,10 +21,7 @@ import { BlurFilter, NoiseFilter } from 'pixi.js';
 
 sprite.filters = new BlurFilter({ strength: 5 });
 
-sprite.filters = [
-  new BlurFilter({ strength: 4 }),
-  new NoiseFilter({ noise: 0.2 }),
-];
+sprite.filters = [new BlurFilter({ strength: 4 }), new NoiseFilter({ noise: 0.2 })];
 ```
 
 :::info

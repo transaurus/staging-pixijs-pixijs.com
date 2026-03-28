@@ -1,3 +1,7 @@
+import { EmbeddedEditor } from '@site/src/components/Editor/EmbeddedEditor';
+import ParentIndexFile from '!!raw-loader!./scene-graph-parent';
+import OrderIndexFile from '!!raw-loader!./scene-graph-order';
+
 # Scene Graph
 
 Every frame, PixiJS is updating and then rendering the scene graph. Let's talk about what's in the scene graph, and how it impacts how you develop your project. If you've built games before, this should all sound very familiar, but if you're coming from HTML and the DOM, it's worth understanding before we get into specific types of objects you can render.
@@ -16,64 +20,7 @@ Each frame, PixiJS runs through the scene graph from the root down through all t
 
 Here's an example. We'll create three sprites, each a child of the last, and animate their position, rotation, scale and alpha. Even though each sprite's properties are set to the same values, the parent-child chain amplifies each change:
 
-```ts
-import { Application, Assets, Container, Sprite } from 'pixi.js';
-
-(async () => {
-  // Create the application helper and add its render target to the page
-  const app = new Application();
-
-  await app.init({ resizeTo: window });
-  document.body.appendChild(app.canvas);
-
-  // Add a container to center our sprite stack on the page
-  const container = new Container({
-    x: app.screen.width / 2,
-    y: app.screen.height / 2,
-  });
-
-  app.stage.addChild(container);
-
-  // load the texture
-  const tex = await Assets.load('https://pixijs.com/assets/bunny.png');
-
-  // Create the 3 sprites, each a child of the last
-  const sprites = [];
-  let parent = container;
-
-  for (let i = 0; i < 3; i++) {
-    const wrapper = new Container();
-    const sprite = Sprite.from(tex);
-
-    sprite.anchor.set(0.5);
-    wrapper.addChild(sprite);
-    parent.addChild(wrapper);
-    sprites.push(wrapper);
-    parent = wrapper;
-  }
-
-  // Set all sprite's properties to the same value, animated over time
-  let elapsed = 0.0;
-
-  app.ticker.add((delta) => {
-    elapsed += delta.deltaTime / 60;
-    const amount = Math.sin(elapsed);
-    const scale = 1.0 + 0.25 * amount;
-    const alpha = 0.75 + 0.25 * amount;
-    const angle = 40 * amount;
-    const x = 75 * amount;
-
-    for (let i = 0; i < sprites.length; i++) {
-      const sprite = sprites[i];
-
-      sprite.scale.set(scale);
-      sprite.alpha = alpha;
-      sprite.angle = angle;
-      sprite.x = x;
-    }
-  });
-})();
-```
+{/* embedded:@site/docs/guides/concepts/scene-graph-parent.js */}
 
 The cumulative translation, rotation, scale and skew of any given node in the scene graph is stored in the object's
 `worldTransform` property. Similarly, the cumulative alpha value is stored in the `worldAlpha` property.
@@ -86,75 +33,7 @@ PixiJS renders the tree from the root down. At each level, the current object is
 
 Check out this example, with two parent objects A & D, and two children B & C under A:
 
-```ts
-import { Application, Container, Sprite, Text, Texture } from 'pixi.js';
-
-(async () => {
-  // Create the application helper and add its render target to the page
-  const app = new Application();
-
-  await app.init({ resizeTo: window });
-  document.body.appendChild(app.canvas);
-
-  // Label showing scene graph hierarchy
-  const label = new Text({
-    text: 'Scene Graph:\n\napp.stage\n  ┗ A\n     ┗ B\n     ┗ C\n  ┗ D',
-    style: { fill: '#ffffff' },
-    position: { x: 300, y: 100 },
-  });
-
-  app.stage.addChild(label);
-
-  // Helper function to create a block of color with a letter
-  const letters = [];
-
-  function addLetter(letter, parent, color, pos) {
-    const bg = new Sprite(Texture.WHITE);
-
-    bg.width = 100;
-    bg.height = 100;
-    bg.tint = color;
-
-    const text = new Text({
-      text: letter,
-      style: { fill: '#ffffff' },
-    });
-
-    text.anchor.set(0.5);
-    text.position = { x: 50, y: 50 };
-
-    const container = new Container();
-
-    container.position = pos;
-    container.visible = false;
-    container.addChild(bg, text);
-    parent.addChild(container);
-
-    letters.push(container);
-
-    return container;
-  }
-
-  // Define 4 letters
-  const a = addLetter('A', app.stage, 0xff0000, { x: 100, y: 100 });
-  const b = addLetter('B', a, 0x00ff00, { x: 20, y: 20 });
-  const c = addLetter('C', a, 0x0000ff, { x: 20, y: 40 });
-  const d = addLetter('D', app.stage, 0xff8800, { x: 140, y: 100 });
-
-  // Display them over time, in order
-  let elapsed = 0.0;
-
-  app.ticker.add((ticker) => {
-    elapsed += ticker.deltaTime / 60.0;
-    if (elapsed >= letters.length) {
-      elapsed = 0.0;
-    }
-    for (let i = 0; i < letters.length; i++) {
-      letters[i].visible = elapsed >= i;
-    }
-  });
-})();
-```
+{/* embedded:@site/docs/guides/concepts/scene-graph-order.js */}
 
 If you'd like to re-order a child object, you can use `setChildIndex()`. To add a child at a given point in a parent's list, use `addChildAt()`. Finally, you can enable automatic sorting of an object's children using the `sortableChildren` option combined with setting the `zIndex` property on each child.
 

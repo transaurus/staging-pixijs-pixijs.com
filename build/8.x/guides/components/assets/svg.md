@@ -1,3 +1,9 @@
+import { EmbeddedEditor } from '@site/src/components/Editor/EmbeddedEditor';
+import SvgIndexFile from '!!raw-loader!../../../examples/graphics_svg_string-parsing.js';
+import SvgIndexFileLoad from '!!raw-loader!../../../examples/graphics_svg_file.js';
+import SvgIndexFileTexture from '!!raw-loader!../../../examples/sprite_svg.js';
+import SvgIndexFileTextureLarge from '!!raw-loader!../../../examples/sprite_svg_custom-data.js';
+
 # SVG's
 
 ### Overview
@@ -43,167 +49,10 @@ const svgTexture = await Assets.load('tiger.svg');
 const mySprite = new Sprite(svgTexture);
 ```
 
-```ts
-// description: This example demonstrates loading and displaying SVG graphics using the Graphics class
-import { Application, Assets, Graphics } from 'pixi.js';
-
-(async () => {
-  // Create a new application
-  const app = new Application();
-
-  // Initialize the application
-  await app.init({ antialias: true, resizeTo: window });
-
-  // Append the application canvas to the document body
-  document.body.appendChild(app.canvas);
-
-  const tigerSvg = await Assets.load({
-    src: 'https://pixijs.com/assets/tiger.svg',
-    data: {
-      parseAsGraphicsContext: true,
-    },
-  });
-
-  const graphics = new Graphics(tigerSvg);
-
-  // line it up as this svg is not centered
-  const bounds = graphics.getLocalBounds();
-
-  graphics.pivot.set(
-    (bounds.x + bounds.width) / 2,
-    (bounds.y + bounds.height) / 2,
-  );
-
-  graphics.position.set(app.screen.width / 2, app.screen.height / 2);
-
-  app.stage.addChild(graphics);
-
-  app.ticker.add(() => {
-    graphics.rotation += 0.01;
-    graphics.scale.set(2 + Math.sin(graphics.rotation));
-  });
-})();
-```
-
-```ts
-// description: This example demonstrates how to create and display SVG graphics using the Graphics class
-import { Application, Graphics } from 'pixi.js';
-
-(async () => {
-  // Create a new application
-  const app = new Application();
-
-  // Initialize the application
-  await app.init({
-    antialias: true,
-    backgroundColor: 'white',
-    resizeTo: window,
-  });
-
-  // Append the application canvas to the document body
-  document.body.appendChild(app.canvas);
-
-  const graphics = new Graphics().svg(`
-            <svg height="400" width="450" xmlns="http://www.w3.org/2000/svg">
-                <!-- Draw the paths -->
-                <path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="4"/>
-                <path id="lineBC" d="M 250 50 l 150 300" stroke="red" stroke-width="4"/>
-                <path id="lineMID" d="M 175 200 l 150 0" stroke="green" stroke-width="4"/>
-                <path id="lineAC" d="M 100 350 q 150 -300 300 0" stroke="blue" fill="none" stroke-width="4"/>
-
-                <!-- Mark relevant points -->
-                <g stroke="black" stroke-width="3" fill="black">
-                    <circle id="pointA" cx="100" cy="350" r="4" />
-                    <circle id="pointB" cx="250" cy="50" r="4" />
-                    <circle id="pointC" cx="400" cy="350" r="4" />
-                </g>
-            </svg>
-        `);
-
-  app.stage.addChild(graphics);
-})();
-```
-
-```ts
-// description: This example demonstrates loading a large SVG texture and displaying it as a sprite
-import { Application, Assets, Sprite } from 'pixi.js';
-
-(async () => {
-  // Create a new application
-  const app = new Application();
-
-  // Initialize the application
-  await app.init({ antialias: true, resizeTo: window });
-
-  // Append the application canvas to the document body
-  document.body.appendChild(app.canvas);
-
-  const tigerTexture = await Assets.load({
-    src: 'https://pixijs.com/assets/tiger.svg',
-  });
-
-  const sprite = new Sprite(tigerTexture);
-
-  // line it up as this svg is not centered
-  const bounds = sprite.getLocalBounds();
-
-  sprite.pivot.set(
-    (bounds.x + bounds.width) / 2,
-    (bounds.y + bounds.height) / 2,
-  );
-
-  sprite.position.set(app.screen.width / 2, app.screen.height / 2);
-
-  app.stage.addChild(sprite);
-
-  app.ticker.add(() => {
-    sprite.rotation += 0.01;
-    sprite.scale.set(2 + Math.sin(sprite.rotation));
-  });
-})();
-```
-
-```ts
-// description: This example demonstrates loading a large SVG texture and displaying it as a sprite
-import { Application, Assets, Sprite } from 'pixi.js';
-
-(async () => {
-  // Create a new application
-  const app = new Application();
-
-  // Initialize the application
-  await app.init({ antialias: true, resizeTo: window });
-
-  // Append the application canvas to the document body
-  document.body.appendChild(app.canvas);
-
-  const tigerTexture = await Assets.load({
-    src: 'https://pixijs.com/assets/tiger.svg',
-    data: {
-      resolution: 4,
-    },
-  });
-
-  const sprite = new Sprite(tigerTexture);
-
-  // line it up as this svg is not centered
-  const bounds = sprite.getLocalBounds();
-
-  sprite.pivot.set(
-    (bounds.x + bounds.width) / 2,
-    (bounds.y + bounds.height) / 2,
-  );
-
-  sprite.position.set(app.screen.width / 2, app.screen.height / 2);
-
-  app.stage.addChild(sprite);
-
-  app.ticker.add(() => {
-    sprite.rotation += 0.01;
-    sprite.scale.set(2 + Math.sin(sprite.rotation));
-  });
-})();
-```
+{/* embedded:@site/docs/examples/graphics_svg_file.js */}
+{/* embedded:@site/docs/examples/graphics_svg_string-parsing.js */}
+{/* embedded:@site/docs/examples/sprite_svg.js */}
+{/* embedded:@site/docs/examples/sprite_svg_custom-data.js */}
 
 ### Scaling Textures
 
@@ -253,7 +102,9 @@ const graphics = new Graphics().svg('');
 If you want to use the same SVG multiple times, you can use `GraphicsContext` to share the parsed SVG data across multiple graphics objects, improving performance by parsing it once and reusing it.
 
 ```ts
-const context = new GraphicsContext().svg('');
+const context = new GraphicsContext().svg(
+  '',
+);
 
 const graphics1 = new Graphics(context);
 const graphics2 = new Graphics(context);

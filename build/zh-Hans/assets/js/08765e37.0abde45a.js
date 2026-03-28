@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpixi_docusaurus=self.webpackChunkpixi_docusaurus||[]).push([["665"],{90263:function(e){e.exports=JSON.parse('{"metadata":{"permalink":"/zh-Hans/blog","page":1,"postsPerPage":18,"totalPages":1,"totalCount":18,"blogDescription":"Latest news from the PixiJS team","blogTitle":"PixiJS News"}}')}}]);

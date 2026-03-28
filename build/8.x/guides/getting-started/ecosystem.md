@@ -6,6 +6,8 @@ PixiJS itself is just a rendering engine. However, there is a foundation of a ro
 
 Optimize and debug your PixiJS projects with DevTools. This browser extension offers real-time insights into application performance, rendering hierarchies, and texture management, ensuring your projects run smoothly.
 
+  
+
 ### [React Integration](https:/react.pixijs.io/)
 
 :::info
@@ -13,6 +15,8 @@ PixiJS React requires React 19 or higher.
 :::
 
 Simplify the use of PixiJS in React applications with the Pixi-React library. This library provides bindings that allow you to manage PixiJS components as React elements, making it easy to incorporate powerful graphics into React's declarative framework.
+
+  
 
 ### [Layout](https://layout.pixijs.io/)
 
@@ -30,9 +34,15 @@ Key features include:
 
 Bring animations to life with Spine-Pixi. This integration combines the power of PixiJS and Spine, a leading animation tool, to create smooth, skeletal-based animations for games and interactive content.
 
+  
+
 ### [Filters](https://github.com/pixijs/filters)
 
 Transform your visuals with PixiJS Filters. This extensive collection of high-performance effects includes options like blur, glow, and color adjustments, giving you the tools to create visually stunning graphics.
+
+  
+  
+  
 
 ### [Sound](https://github.com/pixijs/sound)
 
@@ -56,6 +66,8 @@ All the essentials for building interactive interfaces in PixiJS.
 ### [AssetPack](https://pixijs.io/assetpack/)
 
 Simplify asset management with AssetPack. This tool organizes, packages, and loads assets efficiently, reducing load times and improving resource handling for your projects.
+
+  
 
 ## [PixiJS Userland](https://github.com/pixijs-userland) - Community-Driven Repositories
 
